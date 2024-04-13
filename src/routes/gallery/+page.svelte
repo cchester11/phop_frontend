@@ -1,13 +1,38 @@
 <script>
-      // on mount fetch metadata containing images
+	import { onMount } from 'svelte';
+	const urlPath = 'http://localhost:8000/api/gallery';
+	let imageData = [];
 
-      // store metadata names in an array
+	const fetchImageMetaData = async () => {
+		try {
+			const response = await fetch(urlPath);
+			const data = await response.json();
 
-      // map the array; for every name, fetch the associated image
+			// store metadata names in an array
+			for(let i = 0; i < data.length; i ++) {
+				let curr = data[i]
 
-      // once image is fetched, store it in an array or object (which ever is better)
+				imageData.push(curr)
+			};
+		} catch (error) {
+			console.error('Error fetching images: ', error);
+		};
+	};
+
+	// on mount fetch metadata containing images
+	onMount(() => {
+		fetchImageMetaData();
+	});
+
+	// map the array; for every name, fetch the associated image
+
+	// once image is fetched, store it in an array or object (which ever is better)
 </script>
 
 <h1>Welcome to the gallery</h1>
 
-display the images in a for each manner
+<div>
+	{#each imageData as image}
+		<p>{image}</p>
+	{/each}
+</div>
