@@ -21,8 +21,6 @@
 		};
 	};
 
-	console.log(imageData)
-
 	// on mount fetch metadata containing images
 	onMount(() => {
 		fetchImageMetaData();
