@@ -11,13 +11,17 @@
 			// store metadata names in an array
 			for(let i = 0; i < data.length; i ++) {
 				let curr = data[i]
+				
+				const { id, name, imageUrl } = curr;
 
-				imageData.push(curr)
+				imageData.push(name);
 			};
 		} catch (error) {
 			console.error('Error fetching images: ', error);
 		};
 	};
+
+	console.log(imageData)
 
 	// on mount fetch metadata containing images
 	onMount(() => {
@@ -32,7 +36,5 @@
 <h1>Welcome to the gallery</h1>
 
 <div>
-	{#each imageData as image}
-		<p>{image}</p>
-	{/each}
+	<p>display images here</p>
 </div>

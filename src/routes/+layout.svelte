@@ -5,5 +5,5 @@
 <slot></slot>
 
 <footer>
-<h1>Charles Chester Photography</h1>
+<h1>Powered by: github.com/cchester11</h1>
 </footer>
