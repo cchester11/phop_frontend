@@ -1,11 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
-	const urlPath = 'http://localhost:8000/api/gallery';
+	let imageName = '';
+	const fetchImageNames = 'http://localhost:8000/api/gallery';
+	const fetchPerImage = 'http://localhost:8000/api/sendImage/' + imageName;
 	let imageData = [];
 
 	const fetchImageMetaData = async () => {
 		try {
-			const response = await fetch(urlPath);
+			const response = await fetch(fetchImageNames);
 			const data = await response.json();
 
 			// store metadata names in an array
