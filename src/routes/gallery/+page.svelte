@@ -14,6 +14,6 @@
 
 <div>
 	{#each images as image}
-		<img src={image} alt="description" width="40%" height="50%"/>
+		<img src={image} alt="description" width="30%" height="30%"/>
 	{/each}
 </div>
