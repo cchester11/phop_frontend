@@ -1,5 +1,3 @@
-<h1>Welcome to the contact page</h1>
-
 <form method="post" name="contact_form" action="contact-form-handler.php">
 	Your Name:
 	<input type="text" name="name" />
