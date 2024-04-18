@@ -1,14 +1,14 @@
 import nodemailer from 'nodemailer';
-import { configDotenv } from 'dotenv';
+import { env } from '$lib/env';
+import { json } from '@sveltejs/kit';
 
-configDotenv();
-
+/** @type {import('./$types').RequestHandler} */
 // api route for handling submission of email to the zoho account
-export async function postEmail(req, res) {
+export async function POST({ request }) {
       // try catch structure 
       try {
-            // destructure the request body
-            const { name, email, phone } = req.body
+            // Parse the request body
+            const { name, email, phone } = await request.json();
 
             // configure a transporter object using the createTransport method
             const transporter = nodemailer.createTransport({
@@ -20,37 +20,33 @@ export async function postEmail(req, res) {
                   secure: true,
                   // auth uses nested object containing username and password
                   auth: {
-                        username: process.env.USERNAME,
-                        password: process.env.PASSWORD
+                        username: env.USERNAME,
+                        password: env.PASSWORD
                   }
-            })
+            });
 
             // send email zoho account using the sendMail method
-            await transporter.sendMail({
+            const info = await transporter.sendMail({
                   from: email,
-                  to: process.env.USERNAME,
+                  to: env.USERNAME,
                   subject: email,
                   text: `
                         Name: ${name},
                         Email: ${email},
                         Phone: ${phone}
                   `
-            }, (err, info) => {
-                  if(err) {
-                        res.status(500).json({
-                              message: "Error sending email with: " + error
-                        })
-                  }
+            });
 
-                  res.status(200).json({
-                        message: info
-                  })
-            })
-
-            // handle response to client
+            // Return a Response object with a JSON body
+            return new Response({
+                  status: 200,
+                  body: { message: "Email sent successfully", info }
+            });
       } catch (error) {
-            res.status(500).json({
-                  message: "Error handling request with: " + error
-            })
+            // Return a Response object with a JSON body for errors
+            return new Response({
+                  status: 500,
+                  body: { message: "Error sending email", error }
+            });
       }
 };

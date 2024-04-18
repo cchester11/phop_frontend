@@ -1,4 +1,4 @@
-<form method="post" name="contact_form" action="contact-form-handler.php">
+<form method="POST" name="contact_form" action="contact-form-handler.php">
 	Your Name:
 	<input type="text" name="name" />
 	Email Address:
