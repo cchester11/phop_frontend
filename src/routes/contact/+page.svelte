@@ -5,7 +5,7 @@
 	<input type="text" name="name" />
 	Email Address:
 	<input type="text" name="email" />
-	Message:
-	<textarea name="message"></textarea>
+	Phone Number:
+	<input type="text" name="phone" />
 	<input type="submit" value="Submit" />
 </form>
