@@ -20,14 +20,14 @@ export async function POST({ request }) {
                   secure: true,
                   // auth uses nested object containing username and password
                   auth: {
-                        username: env.USERNAME,
-                        password: env.PASSWORD
+                        user: env.USERNAME,
+                        pass: env.PASSWORD
                   }
             });
 
             // send email zoho account using the sendMail method
             const info = await transporter.sendMail({
-                  from: email,
+                  from: env.USERNAME,
                   to: env.USERNAME,
                   subject: email,
                   text: `
@@ -35,6 +35,15 @@ export async function POST({ request }) {
                         Email: ${email},
                         Phone: ${phone}
                   `
+            }, (err, info) => {
+                  if(err) {
+                        throw new Error(err)
+                  }
+
+                  return {
+                        message: "email sent",
+                        info: info.accepted
+                  }
             });
 
             // Return a Response object with a JSON body
