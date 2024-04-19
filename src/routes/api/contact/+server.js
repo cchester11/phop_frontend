@@ -40,17 +40,14 @@ export async function POST({ request }) {
                         throw new Error(err)
                   }
 
-                  return {
-                        message: "email sent",
-                        info: info.accepted
-                  }
+                  console.log(info.accepted)
             });
 
             // Return a Response object with a JSON body
-            return new Response({
+            return json({
                   status: 200,
                   body: { message: "Email sent successfully", info }
-            });
+            }, new Response())
       } catch (error) {
             // Return a Response object with a JSON body for errors
             return new Response({
