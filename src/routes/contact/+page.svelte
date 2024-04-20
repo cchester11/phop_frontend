@@ -13,3 +13,11 @@
 	</label>
 	<input type="submit" value="Submit" />
 </form>
+
+<style>
+	@import 'tailwindcss/base';
+	@import 'tailwindcss/components';
+	@import 'tailwindcss/utilities';
+
+	/* Additional styles specific to your component */
+</style>
