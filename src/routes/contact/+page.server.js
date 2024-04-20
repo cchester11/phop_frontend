@@ -14,8 +14,8 @@ export const actions = {
                         // 'Content-Type': 'application/x-www-form-urlencoded',
                   },
                   body: {
-                        email: JSON.stringify(email),
                         name: JSON.stringify(name),
+                        email: JSON.stringify(email),
                         phone: JSON.stringify(phone)
                   }
             })
