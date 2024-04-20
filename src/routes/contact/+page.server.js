@@ -7,7 +7,7 @@ export const actions = {
             const name = formData.get('name');
             const phone = formData.get('phone');
             // Process the form data and perform actions
-            const response = await fetch('http://localhost/api/contact', {
+            const response = await fetch('http://localhost:5173/api/contact', {
                   method: "POST",
                   headers: {
                         "Content-Type": "application/json",
