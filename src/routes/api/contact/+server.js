@@ -50,9 +50,9 @@ export async function POST({ request }) {
             }, new Response())
       } catch (error) {
             // Return a Response object with a JSON body for errors
-            return new Response({
+            return json({
                   status: 500,
                   body: { message: "Error sending email", error }
-            });
+            }, new Response()) ;
       }
 };
