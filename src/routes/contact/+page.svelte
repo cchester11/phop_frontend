@@ -1,25 +1,29 @@
+<script>
+	
+</script>
+
 <form method="POST" name="contact_form" action="/contact">
 	<div class="flex flex-col">
 		<div class="mt-6">
-			<label>
+			<label for="name">
 				Your Name:
-				<input type="text" name="name" id="name" />
 			</label>
+			<input type="text" name="name" id="name" class="border-2 border-gray-400 rounded"/>
 		</div>
 		<div class="mt-6">
-			<label>
+			<label for="email">
 				Email Address:
-				<input type="text" name="email" id="email" />
 			</label>
+			<input type="text" name="email" id="email" class="border-2 border-gray-400 rounded"/>
 		</div>
 		<div class="mt-6">
-			<label>
+			<label for="phone">
 				Phone Number:
-				<input type="text" name="phone" id="phone" />
 			</label>
+			<input type="text" name="phone" id="phone" class="border-2 border-gray-400 rounded"/>
 		</div>
 		<div class="mt-6">
-			<input type="submit" value="Submit" />
+			<button type="submit" class="rounded-lg bg-purple-600 p-1">Submit</button>
 		</div>
 	</div>
 </form>
