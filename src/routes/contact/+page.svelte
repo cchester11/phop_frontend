@@ -3,7 +3,7 @@
 </script>
 
 <form method="POST" name="contact_form" action="/contact">
-	<div class="flex flex-col">
+	<div class="flex flex-col justify-center items-center h-screen">
 		<div class="mt-6">
 			<div>
 				<label for="name">Name</label>
