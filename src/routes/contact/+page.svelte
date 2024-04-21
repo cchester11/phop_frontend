@@ -2,7 +2,7 @@
 	
 </script>
 
-<form method="POST" name="contact_form" action="/contact">
+<form method="POST" name="contact_form" action="/contact" class="font-sans font-thin">
 	<div class="flex flex-col justify-center items-center h-screen">
 		<div class="mt-6">
 			<div>
