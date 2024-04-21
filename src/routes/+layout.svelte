@@ -3,7 +3,19 @@
 </script>
 
 <header>
-	<h1>Charles Chester Photography</h1>
+      <nav class="bg-gray-800">
+            <div class="flex relative justify-center items-center h-20">
+                  <div class="mx-7">
+                        <h1>Charles Chester Photography</h1>
+                  </div>
+                  <div class="mx-7">
+                        <h1>Gallery</h1>
+                  </div>
+                  <div class="mx-7">
+                        <h1>Contact</h1>
+                  </div>
+            </div>
+      </nav>
 </header>
 
 <slot></slot>
