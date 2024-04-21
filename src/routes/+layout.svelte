@@ -2,7 +2,7 @@
 	import '../app.css';
 </script>
 
-<header>
+<header class="font-serif">
       <nav class="bg-gray-800">
             <div class="flex relative justify-center items-center h-20">
                   <div class="mx-7 text-white">
@@ -23,3 +23,7 @@
 <footer>
 	<h1>Powered by: github.com/cchester11</h1>
 </footer>
+
+<style>
+      
+</style>
