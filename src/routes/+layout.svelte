@@ -9,10 +9,10 @@
                         <h1>Charles Chester Photography</h1>
                   </div>
                   <div class="mx-7 text-white">
-                        <h1>Gallery</h1>
+                        <a href="/gallery" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Gallery</a>
                   </div>
                   <div class="mx-7 text-white">
-                        <h1>Contact</h1>
+                        <a href="/contact" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
                   </div>
             </div>
       </nav>

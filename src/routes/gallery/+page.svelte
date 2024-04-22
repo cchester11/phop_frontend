@@ -10,8 +10,6 @@
 	});
 </script>
 
-<h1>Welcome to the gallery</h1>
-
 <div>
 	{#each images as image}
 		<img src={image} alt="description" width="30%" height="30%"/>
