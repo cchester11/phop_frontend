@@ -16,8 +16,6 @@
 				class="h-auto max-w-full rounded-lg"
 				src={image}
 				alt="description"
-				width="80%"
-				height="80%"
 			/>
 		{/each}
 </div>
