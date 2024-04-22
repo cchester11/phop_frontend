@@ -10,8 +10,14 @@
 	});
 </script>
 
-<div>
-	{#each images as image}
-		<img src={image} alt="description" width="30%" height="30%"/>
-	{/each}
+<div class="grid grid-cols-2 md:grid-cols-3">
+		{#each images as image}
+			<img
+				class="h-auto max-w-full rounded-lg"
+				src={image}
+				alt="description"
+				width="80%"
+				height="80%"
+			/>
+		{/each}
 </div>
