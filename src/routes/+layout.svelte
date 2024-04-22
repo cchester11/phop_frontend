@@ -20,8 +20,14 @@
 
 <slot></slot>
 
-<footer>
-	<h1>Powered by: github.com/cchester11</h1>
+<footer class="bg-gray-800 font-serif">
+      <div class="flex relative justify-center items-center h-20">
+            <h1 class="text-gray-300">Powered by: 
+                  <span>
+                        <a href="https://github.com/cchester11" target="_blank">github.com/cchester11</a>
+                  </span>
+            </h1>
+      </div>
 </footer>
 
 <style>
