@@ -7,7 +7,12 @@
 		<div class="flex justify-between items-center h-36">
 			<!-- Container for the heading, aligned to the left -->
 			<div class="mx-7 text-gray-300 text-2xl">
-				<h1>Charles Chester Photography</h1>
+				<div>
+                              <p class="text-2xl">Charles Chester</p>
+                        </div>
+                        <div>
+                              <p class="text-2xl">Photography</p>
+                        </div>
 			</div>
 
 			<!-- Container for the navigation buttons, aligned to the right -->
