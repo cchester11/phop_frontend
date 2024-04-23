@@ -12,10 +12,12 @@
 
 <div class="grid grid-cols-2 md:grid-cols-3">
 		{#each images as image}
+		<div class="aspect-auto">
 			<img
-				class="h-auto max-w-full rounded-lg"
+				class="object-cover w-auto h-auto rounded-lg"
 				src={image}
 				alt="description"
 			/>
+		</div>
 		{/each}
 </div>
