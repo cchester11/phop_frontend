@@ -6,13 +6,8 @@
 	<nav class="bg-slate-50">
 		<div class="flex justify-between items-center h-36">
 			<!-- Container for the heading, aligned to the left -->
-			<div class="mx-7 text-2xl">
-				<div>
-                              <p>Charles Chester</p>
-                        </div>
-                        <div>
-                              <p>Photography</p>
-                        </div>
+			<div class="mx-7">
+				<img src="/photo_icon.png" alt="logo" />
 			</div>
 
 			<!-- Container for the navigation buttons, aligned to the right -->
@@ -36,6 +31,9 @@
 	</nav>
 </header>
 
+<div class="w-full flex justify-center items-center font-thin my-16">
+      <h1 class="text-4xl text-slate-900">Charles Chester Photography</h1>
+</div>
 <slot></slot>
 
 <footer class="font-thin text-slate-900 bg-slate-50">
