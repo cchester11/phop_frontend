@@ -32,7 +32,7 @@
 </header>
 
 <div class="w-full flex justify-center items-center my-16">
-      <h1 class="text-4xl text-slate-900" style="font-family: 'Amatic SC', cursive;">Charles Chester Photography</h1>
+      <h1 class="text-4xl text-slate-900" style="font-family: 'Rubik Glitch Pop', sans-serif;">Charles Chester Photography</h1>
 </div>
 <slot></slot>
 
