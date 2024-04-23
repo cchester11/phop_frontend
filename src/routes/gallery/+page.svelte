@@ -10,9 +10,9 @@
 	});
 </script>
 
-<div class="grid grid-cols-2 md:grid-cols-3">
+<div class="md:masonry-2-col lg:masonry-3-col box-border mx-auto before:box-inherit after:box-inherit">
 		{#each images as image}
-		<div class="aspect-auto">
+		<div class="break-inside aspect-auto p-4">
 			<img
 				class="object-cover w-auto h-auto rounded-lg"
 				src={image}
