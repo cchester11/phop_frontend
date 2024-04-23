@@ -38,14 +38,27 @@
 
 <slot></slot>
 
-<footer class="bg-gray-800 font-serif">
-	<div class="flex relative justify-center items-center h-20">
-		<h1 class="text-gray-300">
-			Powered by:
-			<span>
-				<a href="https://github.com/cchester11" target="_blank">github.com/cchester11</a>
-			</span>
-		</h1>
+<footer class="bg-gray-800 text-gray-300 font-thin">
+	<div class="flex flex-row justify-between px-10 items-center h-36">
+            <div class="flex flex-row">
+                  <div class="mx-3">
+                        <button type="button">instagram</button>
+                  </div>
+                  <div class="mx-3">
+                        <button type="button">github</button>
+                  </div>
+                  <div class="mx-3">
+                        <button type="button">substack</button>
+                  </div>
+            </div>
+            <div>
+                  <h1>
+                        Powered by:
+                        <span>
+                              <a href="https://github.com/cchester11" target="_blank">github.com/cchester11</a>
+                        </span>
+                  </h1>
+            </div>
 	</div>
 </footer>
 
