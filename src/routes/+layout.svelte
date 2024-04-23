@@ -2,32 +2,32 @@
 	import '../app.css';
 </script>
 
-<header class="font-thin">
-	<nav class="bg-gray-800">
+<header class="font-thin text-slate-900">
+	<nav class="bg-slate-50">
 		<div class="flex justify-between items-center h-36">
 			<!-- Container for the heading, aligned to the left -->
-			<div class="mx-7 text-gray-300 text-2xl">
+			<div class="mx-7 text-2xl">
 				<div>
-                              <p class="text-2xl">Charles Chester</p>
+                              <p>Charles Chester</p>
                         </div>
                         <div>
-                              <p class="text-2xl">Photography</p>
+                              <p>Photography</p>
                         </div>
 			</div>
 
 			<!-- Container for the navigation buttons, aligned to the right -->
 			<div class="flex flex-row font-thin">
-				<div class="mx-7 text-white">
+				<div class="mx-7">
 					<a
 						href="/gallery"
-						class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm"
+						class="hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm"
 						>Gallery</a
 					>
 				</div>
-				<div class="mx-7 text-white">
+				<div class="mx-7">
 					<a
 						href="/contact"
-						class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm"
+						class= "hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm"
 						>Contact</a
 					>
 				</div>
@@ -38,7 +38,7 @@
 
 <slot></slot>
 
-<footer class="bg-gray-800 text-gray-300 font-thin">
+<footer class="font-thin text-slate-900 bg-slate-50">
 	<div class="flex flex-row justify-between px-10 items-center h-36">
             <div class="flex flex-row">
                   <div class="mx-3">
