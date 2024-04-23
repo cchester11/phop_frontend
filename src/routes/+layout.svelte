@@ -31,8 +31,8 @@
 	</nav>
 </header>
 
-<div class="w-full flex justify-center items-center font-thin my-16">
-      <h1 class="text-4xl text-slate-900">Charles Chester Photography</h1>
+<div class="w-full flex justify-center items-center my-16">
+      <h1 class="text-4xl text-slate-900" style="font-family: 'Amatic SC', cursive;">Charles Chester Photography</h1>
 </div>
 <slot></slot>
 
@@ -49,7 +49,7 @@
                         <img src="/substack_logo.png" alt="substack" />
                   </div>
             </div>
-            <div>
+            <div class="text-xl">
                   <h1>
                         Powered by:
                         <span>
