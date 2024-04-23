@@ -6,7 +6,7 @@
 	<nav class="bg-gray-800">
 		<div class="flex justify-between items-center h-36">
 			<!-- Container for the heading, aligned to the left -->
-			<div class="mx-7 text-indigo-100 text-lg">
+			<div class="mx-7 text-gray-300 text-2xl">
 				<h1>Charles Chester Photography</h1>
 			</div>
 
