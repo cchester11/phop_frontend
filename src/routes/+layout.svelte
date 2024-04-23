@@ -42,13 +42,13 @@
 	<div class="flex flex-row justify-between px-10 items-center h-36">
             <div class="flex flex-row">
                   <div class="mx-3">
-                        <button type="button">instagram</button>
+                        <img src="/github_icon.png" alt="github"/>
                   </div>
                   <div class="mx-3">
-                        <button type="button">github</button>
+                        <img src="/instagram_logo_icon.png" alt="instagram" />
                   </div>
                   <div class="mx-3">
-                        <button type="button">substack</button>
+                        <img src="/substack_logo.png" alt="substack" />
                   </div>
             </div>
             <div>
