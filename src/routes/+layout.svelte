@@ -2,7 +2,7 @@
 	import '../app.css';
 </script>
 
-<header class="font-serif">
+<header class="font-thin">
 	<nav class="bg-gray-800">
 		<div class="flex justify-between items-center h-36">
 			<!-- Container for the heading, aligned to the left -->
@@ -16,18 +16,18 @@
 			</div>
 
 			<!-- Container for the navigation buttons, aligned to the right -->
-			<div class="flex flex-row">
+			<div class="flex flex-row font-thin">
 				<div class="mx-7 text-white">
 					<a
 						href="/gallery"
-						class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+						class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm"
 						>Gallery</a
 					>
 				</div>
 				<div class="mx-7 text-white">
 					<a
 						href="/contact"
-						class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+						class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm"
 						>Contact</a
 					>
 				</div>
