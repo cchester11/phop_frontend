@@ -4,7 +4,7 @@
 
 <header class="font-serif">
 	<nav class="bg-gray-800">
-		<div class="flex justify-between items-center h-20">
+		<div class="flex justify-between items-center h-36">
 			<!-- Container for the heading, aligned to the left -->
 			<div class="mx-7 text-indigo-100 text-lg">
 				<h1>Charles Chester Photography</h1>
