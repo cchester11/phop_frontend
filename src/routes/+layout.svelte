@@ -36,6 +36,7 @@
 	font-weight: 400;
 	font-style: normal;">Charles Chester Photography</h1>
 </div>
+
 <slot></slot>
 
 <footer class="font-thin text-slate-900 bg-slate-50">
