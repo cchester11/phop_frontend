@@ -32,7 +32,9 @@
 </header>
 
 <div class="w-full flex justify-center items-center my-16">
-      <h1 class="text-4xl text-slate-900" style="font-family: 'Rubik Glitch Pop', sans-serif;">Charles Chester Photography</h1>
+      <h1 class="text-4xl text-slate-900" style="font-family: Rubik Doodle Shadow, system-ui;
+	font-weight: 400;
+	font-style: normal;">Charles Chester Photography</h1>
 </div>
 <slot></slot>
 
