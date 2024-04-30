@@ -20,7 +20,7 @@
 		{#each images as image}
 		<div class="break-inside aspect-auto p-1">
 			<img
-				class="object-cover w-auto h-auto rounded-lg"
+				class="object-cover w-auto h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400"
 				src={image}
 				alt="description"
 			/>
