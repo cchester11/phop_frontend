@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<div class="mt-6">
-			<button type="submit" class="rounded text-white bg-sky-700 p-1">Submit</button>
+			<button type="submit" class="rounded text-white bg-purple-400 p-1">Submit</button>
 		</div>
 	</div>
 </form>
