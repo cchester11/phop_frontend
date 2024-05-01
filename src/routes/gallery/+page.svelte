@@ -11,7 +11,10 @@
 	});
 
 	function handleImageClick(imageUrl) {
-		goto('/fullpage/' + encodeURIComponent(imageUrl));
+		const path = `/fullpage/${encodeURIComponent(imageUrl)}`
+		console.log(path)
+		
+		goto(path);
 	}
 </script>
 
