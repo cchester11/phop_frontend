@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { fetchImages } from '$lib/imageService';
 
 	let images = [];
@@ -9,12 +10,8 @@
 		images = await fetchImages();
 	});
 
-	// function here
-	function fullPageView({ events }) {
-		// accepts event
-		// takes event.target and captures the image url associated
-		// saves image url to local storage or prop drills image url the component which displays the full page view of the image
-		// routes user to full page view component where the image url will be displayed
+	function handleImageClick(imageUrl) {
+		goto('/fullpage/' + encodeURIComponent(imageUrl));
 	}
 </script>
 
@@ -23,11 +20,13 @@
 >
 	{#each images as image}
 		<div class="break-inside aspect-auto p-1">
-			<img
-				class="transition ease-in-out object-cover w-auto h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95"
-				src={image}
-				alt="description"
-			/>
+			<button type="button" on:click={() => handleImageClick(image)}>
+				<img
+					class="transition ease-in-out object-cover w-auto h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95"
+					src={image}
+					alt="description"
+				/>
+			</button>
 		</div>
 	{/each}
 </div>
