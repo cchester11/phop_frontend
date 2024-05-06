@@ -20,15 +20,15 @@ export async function POST({ request }) {
                   secure: true,
                   // auth uses nested object containing username and password
                   auth: {
-                        user: env.USERNAME,
-                        pass: env.PASSWORD
+                        user: process.env.USERNAME,
+                        pass: process.env.PASSWORD
                   }
             });
 
             // send email zoho account using the sendMail method
             const info = await transporter.sendMail({
-                  from: env.USERNAME,
-                  to: env.USERNAME,
+                  from: process.env.USERNAME,
+                  to: process.env.USERNAME,
                   subject: email,
                   text: `
                         Name: ${name},
