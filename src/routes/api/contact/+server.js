@@ -5,7 +5,6 @@ import { json } from '@sveltejs/kit';
 /** @type {import('./$types').RequestHandler} */
 // api route for handling submission of email to the zoho account
 export async function POST({ request }) {
-      // try catch structure 
       try {
             // Parse the request body
             const { name, email, phone } = await request.json();
@@ -34,25 +33,22 @@ export async function POST({ request }) {
                         Name: ${name},
                         Email: ${email},
                         Phone: ${phone}
-                  `
-            }, (err, info) => {
-                  if(err) {
-                        throw new Error(err)
-                  }
-
-                  console.log(info.accepted)
+                  `     
             });
+
+            // Log accepted recipients
+            console.log(info.accepted);
 
             // Return a Response object with a JSON body
             return json({
                   status: 200,
                   body: { message: "Email sent successfully", info }
-            }, new Response())
+            });
       } catch (error) {
             // Return a Response object with a JSON body for errors
             return json({
                   status: 500,
-                  body: { message: "Error sending email", error }
-            }, new Response()) ;
+                  body: { message: "Error sending email", error: error.message }
+            });
       }
 };
