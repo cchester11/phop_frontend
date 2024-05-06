@@ -27,7 +27,7 @@ export const actions = {
                   }
 
                   // Process the form data and perform actions
-                  const response = await fetch('http://localhost:5173/api/contact', {
+                  const response = await fetch('https://phop-frontend.vercel.app/api/contact', {
                         method: "POST",
                         headers: {
                               "Content-Type": "application/json"
