@@ -9,7 +9,7 @@
 				<label for="name">Name</label>
 			</div>
 			<div>
-				<input type="text" name="name" id="name" class="border border-gray-400 rounded"/>
+				<input type="text" name="name" id="name" placeholder="John Hancock"  class="border border-gray-400 rounded"/>
 			</div>
 		</div>
 		<div class="mt-6">
@@ -17,7 +17,7 @@
 				<label for="email">Email</label>
 			</div>
 			<div>
-				<input type="text" name="email" id="email" class="border border-gray-400 rounded"/>
+				<input type="text" name="email" id="email" placeholder="myemail@example.com" class="border border-gray-400 rounded"/>
 			</div>
 		</div>
 		<div class="mt-6">
@@ -25,7 +25,7 @@
 				<label for="phone">Phone</label>
 			</div>
 			<div>
-				<input type="text" name="phone" id="phone" class="border border-gray-400 rounded"/>
+				<input type="text" name="phone" id="phone" placeholder="(512) 433-7865"  class="border border-gray-400 rounded"/>
 			</div>
 		</div>
 		<div class="mt-6">
