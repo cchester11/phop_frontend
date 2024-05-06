@@ -1,6 +1,6 @@
 export async function fetchImages(): Promise<string[]> {
-	const fetchImageNames = 'http://localhost:8000/api/gallery';
-	const fetchPerImage = 'http://localhost:8000/api/sendImage/';
+	const fetchImageNames = 'https://phopbackend-production.up.railway.app/api/gallery';
+	const fetchPerImage = 'https://phopbackend-production.up.railway.app/api/sendImage/';
 
 	let imageData: string[] = [];
 
