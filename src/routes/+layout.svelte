@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+	import { Jumper } from 'svelte-loading-spinners';
+	import { navigating } from '$app/stores';
 </script>
 
 <div class="w-full h-full flex flex-col justify-between">
@@ -40,8 +42,13 @@
 			Charles Chester Photography
 		</h1>
 	</div>
+	<div>
+		{#if $navigating}
+			<Jumper size="60" color="#CF9FFF" unit="px" duration="1s" />
+		{/if}
 
-	<slot></slot>
+		<slot></slot>
+	</div>
 
 	<footer class="font-thin text-slate-900 bg-slate-50">
 		<div class="flex flex-row justify-between px-10 items-center h-36">
