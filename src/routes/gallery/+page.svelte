@@ -2,13 +2,14 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { fetchImages } from '$lib/imageService';
-	import { Jumper } from 'svelte-loading-spinners';
+	import { Rainbow } from 'svelte-loading-spinners';
 
 	let images = [];
 	let loading = true;
 
 	// on mount fetch metadata containing images
 	onMount(async () => {
+		// loading remains true until the fetchImages function returns the images
 		images = await fetchImages();
 		loading = false;
 	});
@@ -23,12 +24,15 @@
 
 {#if loading}
 	<!-- Show spinner while images are loading -->
-	<div class="flex flex-col justify-around">
-		<div class="my-5 w-5">
-			<Jumper size="60" color="#CF9FFF" unit="px" duration="1s" />
-		</div>
-		<div class="bg-purple-400 rounded p-4 text-white">
-			<p>Loading Gallery...</p>
+	<div class="w-full flex justify-center">
+		<div class="flex flex-col justify-around w-1/4">
+			<div class="w-full flex justify-center">
+				<Rainbow size="60" color="#CF9FFF" unit="px" duration="1s" />
+			</div>
+			<br/>
+			<div class="w-full flex justify-center bg-purple-400 rounded p-4 text-white mt-9">
+				<p>Loading Gallery...</p>
+			</div>
 		</div>
 	</div>
 {:else}
