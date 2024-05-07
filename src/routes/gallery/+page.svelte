@@ -2,34 +2,49 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import { fetchImages } from '$lib/imageService';
+	import { Jumper } from 'svelte-loading-spinners';
 
 	let images = [];
+	let loading = true;
 
 	// on mount fetch metadata containing images
 	onMount(async () => {
 		images = await fetchImages();
+		loading = false;
 	});
 
 	function handleImageClick(imageUrl) {
-		const path = `/fullpage/${encodeURIComponent(imageUrl)}`
-		console.log(path)
-		
+		const path = `/fullpage/${encodeURIComponent(imageUrl)}`;
+		console.log(path);
+
 		goto(path);
 	}
 </script>
 
-<div
-	class="md:masonry-2-col lg:masonry-3-col box-border mx-36 my-20 before:box-inherit after:box-inherit"
->
-	{#each images as image}
-		<div class="break-inside aspect-auto p-1">
-			<button type="button" on:click={() => handleImageClick(image)}>
-				<img
-					class="transition ease-in-out object-cover w-auto h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95"
-					src={image}
-					alt="description"
-				/>
-			</button>
+{#if loading}
+	<!-- Show spinner while images are loading -->
+	<div class="flex flex-col justify-around">
+		<div class="my-5 w-5">
+			<Jumper size="60" color="#CF9FFF" unit="px" duration="1s" />
 		</div>
-	{/each}
-</div>
+		<div class="bg-purple-400 rounded p-4 text-white">
+			<p>Loading Gallery...</p>
+		</div>
+	</div>
+{:else}
+	<div
+		class="md:masonry-2-col lg:masonry-3-col box-border mx-36 my-20 before:box-inherit after:box-inherit"
+	>
+		{#each images as image}
+			<div class="break-inside aspect-auto p-1">
+				<button type="button" on:click={() => handleImageClick(image)}>
+					<img
+						class="transition ease-in-out object-cover w-auto h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95"
+						src={image}
+						alt="description"
+					/>
+				</button>
+			</div>
+		{/each}
+	</div>
+{/if}
