@@ -29,7 +29,7 @@
 			<div class="w-full flex justify-center">
 				<Rainbow size="60" color="#CF9FFF" unit="px" duration="1s" />
 			</div>
-			<br/>
+			<br />
 			<div class="w-full flex justify-center bg-purple-400 rounded p-4 text-white mt-9">
 				<p>Loading Gallery...</p>
 			</div>
@@ -37,13 +37,13 @@
 	</div>
 {:else}
 	<div
-		class="md:masonry-2-col lg:masonry-3-col box-border mx-36 my-20 before:box-inherit after:box-inherit"
+		class="md:masonry-2-col lg:masonry-3-col box-border mx-4 md:mx-8 lg:mx-16 my-4 md:my-8 lg:my-12 before:box-inherit after:box-inherit"
 	>
 		{#each images as image}
 			<div class="break-inside aspect-auto p-1">
 				<button type="button" on:click={() => handleImageClick(image)}>
 					<img
-						class="transition ease-in-out object-cover xl:w-auto lg:w-auto md:w-auto xl:h-auto lg:h-auto md:h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95 hover:grayscale"
+						class="transition ease-in-out object-cover w-full md:w-auto lg:w-auto xl:w-auto h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95 hover:grayscale"
 						src={image}
 						alt="description"
 					/>
