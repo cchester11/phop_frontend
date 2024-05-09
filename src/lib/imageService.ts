@@ -1,10 +1,26 @@
 export async function fetchImages(): Promise<string[]> {
-	const fetchImageNames = 'https://phopbackend-production.up.railway.app/api/gallery';
-	const fetchPerImage = 'https://phopbackend-production.up.railway.app/api/sendImage/';
+	let NODE_ENV = false;
+	let fetchImageNames;
+	let fetchPerImage;
+
+	if (process.env.NODE_ENV === 'production') {
+		NODE_ENV = true;
+	}
+
+	if ((NODE_ENV == false)) {
+		console.log('running locally');
+		fetchImageNames = 'http://localhost:8000/api/gallery';
+		fetchPerImage = 'http://localhost:8000/api/sendImage/';
+	} else {
+		console.log('running in production');
+		fetchImageNames = 'https://phopbackend-production.up.railway.app/api/gallery';
+		fetchPerImage = 'https://phopbackend-production.up.railway.app/api/sendImage/';
+	}
 
 	let imageData: string[] = [];
 
 	try {
+		console.log(fetchImageNames)
 		const response = await fetch(fetchImageNames);
 		const data = await response.json();
 
@@ -21,6 +37,7 @@ export async function fetchImages(): Promise<string[]> {
 		for (let i = 0; i < imageData.length; i++) {
 			const imageName = imageData[i];
 
+			console.log(fetchPerImage)
 			const response = await fetch(fetchPerImage + imageName);
 			// convert image response into blob
 			const blob = await response.blob();
