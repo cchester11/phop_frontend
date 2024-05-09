@@ -37,7 +37,7 @@
 	<div class="w-full flex justify-center items-center my-16">
 		<div class="w-1/2 flex justify-center items-center">
 			<h1
-				class="xl:text-4xl sm:text-xl text-slate-900"
+				class="xl:text-2xl sm:text-xl text-slate-900"
 				style="font-family: Notable, sans-serif; font-weight: 400; font-style: normal;"
 			>
 				Charles Chester Photography
