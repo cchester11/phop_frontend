@@ -43,7 +43,7 @@
 			<div class="break-inside aspect-auto p-1">
 				<button type="button" on:click={() => handleImageClick(image)}>
 					<img
-						class="transition ease-in-out object-cover xl:w-auto lg:w-auto md:w-auto h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95"
+						class="transition ease-in-out object-cover xl:w-auto lg:w-auto md:w-auto xl:h-auto lg:h-auto md:h-auto rounded-lg hover:cursor-pointer hover:border-2 hover:border-purple-400 hover:scale-95 hover:grayscale"
 						src={image}
 						alt="description"
 					/>
