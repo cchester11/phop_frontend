@@ -54,24 +54,37 @@
 
 	<footer class="font-thin text-slate-900 bg-slate-50">
 		<div class="flex flex-row justify-between px-10 items-center h-36">
-			<div class="flex flex-row">
+			<div class="flex flex-row items-center mr-3">
 				<div class="mx-3">
-					<img src="/github_icon.png" alt="github" />
+					<img
+						class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+						src="/github_icon.png"
+						alt="github"
+					/>
 				</div>
 				<div class="mx-3">
-					<img src="/instagram_logo_icon.png" alt="instagram" />
+					<img
+						class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+						src="/instagram_logo_icon.png"
+						alt="instagram"
+					/>
 				</div>
 				<div class="mx-3">
-					<img src="/substack_logo.png" alt="substack" />
+					<img
+						class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+						src="/substack_logo.png"
+						alt="substack"
+					/>
 				</div>
 			</div>
-			<div class="text-xl">
-				<h1>
+
+			<div class="text-sm ml-3">
+				<p>
 					Powered by:
 					<span>
 						<a href="https://github.com/cchester11" target="_blank">github.com/cchester11</a>
 					</span>
-				</h1>
+				</p>
 			</div>
 		</div>
 	</footer>
